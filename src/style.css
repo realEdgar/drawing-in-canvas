@@ -1,3 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
 body {
-    background: radial-gradient(blue 20%, red 80%);
+    font-family: 'Courier New', Courier, monospace;
+    background: radial-gradient(blue 0%, red 100%);
+}
+.drawing-lines {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.title {
+    width: 300px;
+    margin: 50px 0;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+canvas {
+    border: 1px solid #fff;
 }
