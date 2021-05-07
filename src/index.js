@@ -2,9 +2,6 @@
 const canvaNoOne = document.getElementById('canvaNo1');
 const ctxOne = canvaNoOne.getContext('2d');
 
-const canvaNoTwo = document.getElementById('canvaNo2');
-const ctxTwo = canvaNoTwo.getContext('2d');
-
 console.log(ctxOne);
 console.log(ctxTwo);
 
@@ -40,3 +37,8 @@ const drawingCurves = () => {
 }
 
 drawingCurves();
+
+// Drawing using math topics
+
+const canvaNoTwo = document.getElementById('canvaNo2');
+const ctxTwo = canvaNoTwo.getContext('2d');
