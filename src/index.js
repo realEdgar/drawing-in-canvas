@@ -3,7 +3,6 @@ const canvaNoOne = document.getElementById('canvaNo1');
 const ctxOne = canvaNoOne.getContext('2d');
 
 console.log(ctxOne);
-console.log(ctxTwo);
 
 // Drawing Figures
 
@@ -42,3 +41,29 @@ drawingCurves();
 
 const canvaNoTwo = document.getElementById('canvaNo2');
 const ctxTwo = canvaNoTwo.getContext('2d');
+
+function drawingAStar(xi, yi, xf, yf) {
+    ctxTwo.beginPath();
+    ctxTwo.strokeStyle = "#fff";
+    ctxTwo.moveTo(xi, yi);
+    ctxTwo.lineTo(xf, yf);
+    ctxTwo.stroke();
+    ctxTwo.closePath();
+}
+
+// Drawing a star with lines
+
+for(let i = 0; i <= 250; i += 5) {
+    let plusI = 250 + i;
+    let lessISlope = 125 - i*0.5;
+    let plusISlope = 375 + i*0.5;
+    let lessI = 250 - i;
+    drawingAStar(250, 250, plusI, lessISlope);
+    drawingAStar(250, 250, plusISlope, lessI);
+    drawingAStar(250, 250, lessI, lessISlope);
+    drawingAStar(250, 250, lessISlope, lessI);
+    drawingAStar(250, 250, lessISlope, plusI);
+    drawingAStar(250, 250, lessI, plusISlope);
+    drawingAStar(250, 250, plusI, plusISlope);
+    drawingAStar(250, 250, plusISlope, plusI);
+}

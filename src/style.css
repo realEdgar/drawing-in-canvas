@@ -11,6 +11,7 @@ body {
     background: radial-gradient(blue 0%, red 100%);
 }
 .drawing-lines {
+    margin: 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -18,7 +19,7 @@ body {
 }
 .title {
     width: 300px;
-    margin: 50px 0;
+    margin: 50px;
     padding: 10px;
     border-radius: 20px;
     text-align: center;
@@ -27,4 +28,8 @@ body {
 }
 canvas {
     border: 1px solid #fff;
+}
+.canvasTwo {
+    margin: 100px;
+    transform: rotate(45deg);
 }
