@@ -90,4 +90,5 @@ for(let i = 0; i < 100; i++) {
     drawingLines("#fff", start, advanceI, advanceIPlusTen, end);
     drawingLines("#000", advanceI, start, end, advanceIPlusTen);
     drawingLines("#453200", advanceI, end, end, end - advanceIPlusTen);
+    drawingLines("#e45322", start, 500 - advanceI, start+advanceIPlusTen, start);
 }
