@@ -67,3 +67,25 @@ for(let i = 0; i <= 250; i += 5) {
     drawingAStar(250, 250, plusI, plusISlope);
     drawingAStar(250, 250, plusISlope, plusI);
 }
+
+// Drawing amaizing things
+
+const canvasNoThree = document.getElementById('canvaNo3');
+const ctxThree = canvasNoThree.getContext('2d');
+
+function drawingLines(xi, yi, xf, yf) {
+    ctxThree.beginPath();
+    ctxThree.strokeStyle = "#fff";
+    ctxThree.moveTo(xi, yi);
+    ctxThree.lineTo(xf, yf);
+    ctxThree.stroke();
+    ctxThree.closePath();
+}
+
+for(let i = 0; i < 100; i++) {
+    let xi = 0;
+    let yi = i*10;
+    let xf = 10 + i*10;
+    let yf = 500;
+    drawingLines(xi, yi, xf, yf);
+}

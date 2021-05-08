@@ -26,10 +26,10 @@ body {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.5);
 }
-canvas {
-    border: 1px solid #fff;
-}
 .canvasTwo {
     margin: 100px;
     transform: rotate(45deg);
+}
+.canvasThree {
+    border: 3px solid #fff;
 }
