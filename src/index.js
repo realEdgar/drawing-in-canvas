@@ -73,9 +73,9 @@ for(let i = 0; i <= 250; i += 5) {
 const canvasNoThree = document.getElementById('canvaNo3');
 const ctxThree = canvasNoThree.getContext('2d');
 
-function drawingLines(xi, yi, xf, yf) {
+function drawingLines(color, xi, yi, xf, yf) {
     ctxThree.beginPath();
-    ctxThree.strokeStyle = "#fff";
+    ctxThree.strokeStyle = color;
     ctxThree.moveTo(xi, yi);
     ctxThree.lineTo(xf, yf);
     ctxThree.stroke();
@@ -83,10 +83,11 @@ function drawingLines(xi, yi, xf, yf) {
 }
 
 for(let i = 0; i < 100; i++) {
-    let xi = 0;
-    let yi = i*10;
-    let xf = 10 + i*10;
-    let yf = 500;
-    drawingLines(xi, yi, xf, yf);
-    drawingLines(yi, xi, yf, xf);
+    let start = 0;
+    let advanceI = i*10;
+    let advanceIPlusTen = 10 + i*10;
+    let end = 500;
+    drawingLines("#fff", start, advanceI, advanceIPlusTen, end);
+    drawingLines("#000", advanceI, start, end, advanceIPlusTen);
+    drawingLines("#453200", advanceI, end, end, end - advanceIPlusTen);
 }
