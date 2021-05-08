@@ -88,4 +88,5 @@ for(let i = 0; i < 100; i++) {
     let xf = 10 + i*10;
     let yf = 500;
     drawingLines(xi, yi, xf, yf);
+    drawingLines(yi, xi, yf, xf);
 }
