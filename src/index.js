@@ -29,7 +29,6 @@ drawingFigures("#ff0000", "#ff8700", 150, 150, 200, 262.5, 270, 288.5);
 const drawingCurves = () => {
     ctxOne.beginPath();
     ctxOne.strokeStyle = "#ff0000";
-    ctxOne.fillStyle= "#ff8700"
     ctxOne.moveTo(100, 37.5);
     ctxOne.quadraticCurveTo(150, -10, 200, 37.5);
     ctxOne.stroke();
@@ -44,7 +43,7 @@ const ctxTwo = canvaNoTwo.getContext('2d');
 
 function drawingAStar(xi, yi, xf, yf) {
     ctxTwo.beginPath();
-    ctxTwo.strokeStyle = "#fff";
+    ctxTwo.strokeStyle = "#ff8700";
     ctxTwo.moveTo(xi, yi);
     ctxTwo.lineTo(xf, yf);
     ctxTwo.stroke();
@@ -87,8 +86,8 @@ for(let i = 0; i < 100; i++) {
     let advanceI = i*10;
     let advanceIPlusTen = 10 + i*10;
     let end = 300;
-    drawingLines("#000", start, advanceI, advanceIPlusTen, end);
-    drawingLines("#000", advanceI, start, end, advanceIPlusTen);
-    drawingLines("#000", advanceI, end, end, end - advanceIPlusTen);
-    drawingLines("#000", start, 300 - advanceI, start+advanceIPlusTen, start);
+    drawingLines("#ff8700", start, advanceI, advanceIPlusTen, end);
+    drawingLines("#ff8700", advanceI, start, end, advanceIPlusTen);
+    drawingLines("#ff8700", advanceI, end, end, end - advanceIPlusTen);
+    drawingLines("#ff8700", start, 300 - advanceI, start+advanceIPlusTen, start);
 }
