@@ -42,3 +42,8 @@ body {
 .canvasThree {
     border: 3px solid black;
 }
+
+.canvasFour {
+    border-radius: 50%;
+    background: radial-gradient(green 0%, blue 100%);
+}

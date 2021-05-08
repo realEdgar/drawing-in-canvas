@@ -91,3 +91,45 @@ for(let i = 0; i < 100; i++) {
     drawingLines("#ff8700", advanceI, end, end, end - advanceIPlusTen);
     drawingLines("#ff8700", start, 300 - advanceI, start+advanceIPlusTen, start);
 }
+
+// Drawing a heart
+
+const canvaNoFour = document.getElementById('canvaNo4');
+const ctxFour = canvaNoFour.getContext('2d');
+
+ctxFour.strokeStyle = "#000";
+ctxFour.fillStyle = "#ff0044";
+ctxFour.beginPath();
+ctxFour.moveTo(150, 100);
+ctxFour.bezierCurveTo(150, 97, 145, 85, 125, 85);
+ctxFour.bezierCurveTo(95, 85, 95, 122.5, 95, 122.5);
+ctxFour.bezierCurveTo(95, 140, 115, 162, 150, 190);
+ctxFour.bezierCurveTo(185, 162, 205, 140, 205, 122.5);
+ctxFour.bezierCurveTo(205, 122.5, 205, 85, 175, 85);
+ctxFour.bezierCurveTo(160, 85, 150, 97, 150, 100);
+ctxFour.stroke();
+ctxFour.fill();
+
+// Making an Arrow
+
+ctxFour.beginPath();
+ctxFour.lineWidth = 2;
+ctxFour.fillStyle = "#000";
+ctxFour.moveTo(78, 210);
+ctxFour.lineTo(80, 200);
+ctxFour.lineTo(70, 202);
+
+ctxFour.moveTo(80, 200);
+ctxFour.lineTo(120, 165);
+ctxFour.moveTo(160, 125);
+ctxFour.lineTo(205, 80);
+ctxFour.stroke();
+
+ctxFour.beginPath();
+ctxFour.moveTo(205, 80);
+ctxFour.lineTo(205, 90);
+ctxFour.lineTo(215, 70);
+ctxFour.lineTo(195, 80);
+ctxFour.lineTo(205, 80);
+ctxFour.stroke();
+ctxFour.fill();
