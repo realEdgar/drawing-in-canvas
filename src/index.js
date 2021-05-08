@@ -19,10 +19,10 @@ const drawingFigures = (colorBorder, colorFill, startX, startY, endX, endY, end1
     ctxOne.fill();
 }
 
-drawingFigures("#ff0000", "#ff8700", 250, 250, 200, 75, 60, 25);
-drawingFigures("#ff0000", "#ff8700", 250, 250, 300, 75, 440, 25);
-drawingFigures("#ff0000", "#ff8700", 250, 250, 200, 425, 60, 475);
-drawingFigures("#ff0000", "#ff8700", 250, 250, 300, 425, 440, 475);
+drawingFigures("#ff0000", "#ff8700", 150, 150, 100, 37.5, 30, 12.5);
+drawingFigures("#ff0000", "#ff8700", 150, 150, 200, 37.5, 270, 12.5);
+drawingFigures("#ff0000", "#ff8700", 150, 150, 100, 262.5, 30, 288.5);
+drawingFigures("#ff0000", "#ff8700", 150, 150, 200, 262.5, 270, 288.5);
 
 // Drawing Curves
 
@@ -30,8 +30,8 @@ const drawingCurves = () => {
     ctxOne.beginPath();
     ctxOne.strokeStyle = "#ff0000";
     ctxOne.fillStyle= "#ff8700"
-    ctxOne.moveTo(200, 75);
-    ctxOne.quadraticCurveTo(250, -60, 300, 75);
+    ctxOne.moveTo(100, 37.5);
+    ctxOne.quadraticCurveTo(150, -10, 200, 37.5);
     ctxOne.stroke();
 }
 
@@ -53,19 +53,19 @@ function drawingAStar(xi, yi, xf, yf) {
 
 // Drawing a star with lines
 
-for(let i = 0; i <= 250; i += 5) {
-    let plusI = 250 + i;
-    let lessISlope = 125 - i*0.5;
-    let plusISlope = 375 + i*0.5;
-    let lessI = 250 - i;
-    drawingAStar(250, 250, plusI, lessISlope);
-    drawingAStar(250, 250, plusISlope, lessI);
-    drawingAStar(250, 250, lessI, lessISlope);
-    drawingAStar(250, 250, lessISlope, lessI);
-    drawingAStar(250, 250, lessISlope, plusI);
-    drawingAStar(250, 250, lessI, plusISlope);
-    drawingAStar(250, 250, plusI, plusISlope);
-    drawingAStar(250, 250, plusISlope, plusI);
+for(let i = 0; i <= 150; i += 5) {
+    let plusI = 150 + i;
+    let lessISlope = 75 - i*0.5;
+    let plusISlope = 225 + i*0.5;
+    let lessI = 150 - i;
+    drawingAStar(150, 150, plusI, lessISlope);
+    drawingAStar(150, 150, plusISlope, lessI);
+    drawingAStar(150, 150, lessI, lessISlope);
+    drawingAStar(150, 150, lessISlope, lessI);
+    drawingAStar(150, 150, lessISlope, plusI);
+    drawingAStar(150, 150, lessI, plusISlope);
+    drawingAStar(150, 150, plusI, plusISlope);
+    drawingAStar(150, 150, plusISlope, plusI);
 }
 
 // Drawing amaizing things
@@ -86,9 +86,9 @@ for(let i = 0; i < 100; i++) {
     let start = 0;
     let advanceI = i*10;
     let advanceIPlusTen = 10 + i*10;
-    let end = 500;
-    drawingLines("#fff", start, advanceI, advanceIPlusTen, end);
+    let end = 300;
+    drawingLines("#000", start, advanceI, advanceIPlusTen, end);
     drawingLines("#000", advanceI, start, end, advanceIPlusTen);
-    drawingLines("#453200", advanceI, end, end, end - advanceIPlusTen);
-    drawingLines("#e45322", start, 500 - advanceI, start+advanceIPlusTen, start);
+    drawingLines("#000", advanceI, end, end, end - advanceIPlusTen);
+    drawingLines("#000", start, 300 - advanceI, start+advanceIPlusTen, start);
 }
