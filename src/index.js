@@ -43,7 +43,7 @@ const ctxTwo = canvaNoTwo.getContext('2d');
 
 function drawingAStar(xi, yi, xf, yf) {
     ctxTwo.beginPath();
-    ctxTwo.strokeStyle = "#ff8700";
+    ctxTwo.strokeStyle = "#ff0044";
     ctxTwo.moveTo(xi, yi);
     ctxTwo.lineTo(xf, yf);
     ctxTwo.stroke();
@@ -86,10 +86,10 @@ for(let i = 0; i < 100; i++) {
     let advanceI = i*10;
     let advanceIPlusTen = 10 + i*10;
     let end = 300;
-    drawingLines("#ff8700", start, advanceI, advanceIPlusTen, end);
-    drawingLines("#ff8700", advanceI, start, end, advanceIPlusTen);
-    drawingLines("#ff8700", advanceI, end, end, end - advanceIPlusTen);
-    drawingLines("#ff8700", start, 300 - advanceI, start+advanceIPlusTen, start);
+    drawingLines("#ff0044", start, advanceI, advanceIPlusTen, end);
+    drawingLines("#ff0044", advanceI, start, end, advanceIPlusTen);
+    drawingLines("#ff0044", advanceI, end, end, end - advanceIPlusTen);
+    drawingLines("#ff0044", start, 300 - advanceI, start+advanceIPlusTen, start);
 }
 
 // Drawing a heart
@@ -140,7 +140,7 @@ const canvaNoFive = document.getElementById('canvaNo5');
 const ctxFive = canvaNoFive.getContext('2d');
 
 function drawingCircles(x,y,radius, startAngle, endAngle, anticlockwise) {
-    ctxFive.strokeStyle = "#ff8700";
+    ctxFive.strokeStyle = "#ff0044";
     ctxFive.lineWidth = 2;
     ctxFive.beginPath()
     ctxFive.arc(x,y,radius, startAngle, endAngle, anticlockwise);
