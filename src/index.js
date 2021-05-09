@@ -133,3 +133,21 @@ ctxFour.lineTo(195, 80);
 ctxFour.lineTo(205, 80);
 ctxFour.stroke();
 ctxFour.fill();
+
+// Drawing circles
+
+const canvaNoFive = document.getElementById('canvaNo5');
+const ctxFive = canvaNoFive.getContext('2d');
+
+function drawingCircles(x,y,radius, startAngle, endAngle, anticlockwise) {
+    ctxFive.strokeStyle = "#ff8700";
+    ctxFive.lineWidth = 2;
+    ctxFive.beginPath()
+    ctxFive.arc(x,y,radius, startAngle, endAngle, anticlockwise);
+    ctxFive.stroke();
+}
+let radius = 0;
+for(let i = 1; i < 100; i += 2) {
+    radius += i;
+    drawingCircles(150, 150, radius, 0, Math.PI*2, true);
+}
