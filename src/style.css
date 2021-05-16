@@ -38,13 +38,10 @@ body {
     background: radial-gradient(green 0%, blue 100%);
 }
 .canvasTwo {
-    margin: 100px;
-    transform: rotate(45deg);
-    background: radial-gradient(green 0%, blue 100%);
+    background: radial-gradient(green 20%, blue 100%);
 }
 
 .canvasThree {
-    border: 3px solid black;
     background: radial-gradient(green 0%, blue 100%);
 }
 
@@ -53,6 +50,7 @@ body {
     background: radial-gradient(green 0%, blue 100%);
 }
 
-.canvasFive {
-    border: 2px solid black; background: radial-gradient(green 0%, blue 100%);
+.canvasFive, .canvasSix {
+    border: 2px solid black; 
+    background: radial-gradient(green 0%, blue 100%);
 }
